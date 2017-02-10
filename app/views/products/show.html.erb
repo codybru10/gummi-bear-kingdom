@@ -1,12 +1,22 @@
-<h1><%= @product.name %> Detail </h1>
 
-<h4>Cost: $<%= @product.cost %> </h4>
-<h4>Country of Origin: <%= @product.origin %> </h4>
-<img src="<%= @product.img %>" alt="A Photo of Gummy Bears" >
-<br>
-<hr>
-
-<%= link_to "Edit", edit_product_path(@product) %>   |  
-<%= link_to "Delete", product_path(@product),
-      :data => {:confirm => "Are you sure?",
-               :method => "delete"} %>
+ <div class="col s12 m7">
+     <h2 class="header"> <%= @product.name %> </h2>
+     <div class="card horizontal">
+       <div class="card-image">
+         <img src=" <%= @product.img %> ">
+       </div>
+       <div class="card-stacked">
+         <div class="card-content">
+           <p>Cost:  $<%= @product.cost %> </p>
+           <p>Country of Origin: <%= @product.origin %> </p>
+         </div>
+         <div class="card-action">
+           <a href="/">Back To All Products</a>
+           <%= link_to "Edit", edit_product_path(@product) %>
+           <%= link_to "Delete", product_path(@product),
+           :data => {:confirm => "Are you sure?",
+             :method => "delete"} %>
+         </div>
+       </div>
+     </div>
+   </div>
