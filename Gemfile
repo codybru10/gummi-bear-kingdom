@@ -21,6 +21,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'devise'
+gem "factory_girl_rails", "~> 4.0"
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
