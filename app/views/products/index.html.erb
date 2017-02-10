@@ -1,7 +1,25 @@
 <h1>All Products</h1>
 
 <% @products.each do |product| %>
-  <h4> Name: <%= link_to product.name, product_path(product) %> </h4>
+    <div class="row">
+      <div class="col s12 m10">
+        <div class="card">
+          <div class="card-image">
+            <img src="<%= product.img %>">
+            <span class="card-title"> <%= product.name %> </span>
+          </div>
+          <div class="card-content">
+            <p>I am a very simple card. I am good at containing small bits of information.
+            I am convenient because I require little markup to use effectively.</p>
+          </div>
+          <div class="card-action">
+            <h6> <%= link_to product.name, product_path(product) %> </h6>
+          </div>
+        </div>
+      </div>
+    </div>
 <% end %>
 
-<%= link_to "Add New Product", new_product_path %>
+<button type="button" class="btn">
+  <%= link_to "Add New Product", new_product_path %>
+</button>
