@@ -42,6 +42,18 @@ class ProductsController < ApplicationController
     redirect_to products_path
   end
 
+  def upvote
+  @product = Product.find(params[:id])
+  @product.upvote_by current_admin
+  redirect_to :back
+end
+
+def downvote
+  @product = Product.find(params[:id])
+  @product.downvote_by current_admin
+  redirect_to :back
+end
+
   private
   def product_params
     params.require(:product).permit(:name, :cost, :origin, :img)

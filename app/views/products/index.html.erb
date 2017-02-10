@@ -10,6 +10,14 @@
 
           <div class="card-action">
             <h6> <%= link_to product.name, product_path(product) %> </h6>
+            <%= link_to like_product_path(product), method: :put do %>
+              Like
+              <%= product.get_upvotes.size %>
+            <% end %>
+            <%= link_to dislike_product_path(product), method: :put do %>
+              Dislike
+              <%= product.get_downvotes.size %>
+            <% end %>
           </div>
         </div>
       </div>

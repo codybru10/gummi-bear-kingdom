@@ -13,13 +13,14 @@
       <div class="nav-wrapper red darken-1">
         <a href="/" class="brand-logo">Gummi Bear Kingdom</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="/products/new">Add Product</a></li>
-          <% if admin_signed_in? %><strong><%= current_admin.email %></strong>.
+          <% if admin_signed_in? %>
+            <strong><%= current_admin.email %></strong>
             <li><%= link_to "Logout", destroy_admin_session_path, method: :delete, :class => 'navbar-link'  %></li>
           <% else %>
             <%= link_to "Sign up", new_admin_registration_path, :class => 'navbar-link'  %> |
             <%= link_to "Login", new_admin_session_path, :class => 'navbar-link'  %>
           <% end %>
+          <li><a href="/products/new">Add Product</a></li>
         </ul>
       </div>
     </nav>
