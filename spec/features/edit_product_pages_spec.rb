@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-describe "the add a product process" do
-  it "adds a new product" do
+describe "the edit a product process" do
+  it "edits a new product" do
     test_product = Product.create(:name => "Yummy Bears", :cost => 3, :origin => "Mexice", :img => "https://images.vat19.com/covers/large/worlds-largest-gummy-bear-bubblegum.jpg")
     visit product_path(test_product)
     click_link "Edit"
