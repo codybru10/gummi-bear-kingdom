@@ -1,0 +1,4 @@
+class RegistrationController < ApplicationController
+  
+
+end
