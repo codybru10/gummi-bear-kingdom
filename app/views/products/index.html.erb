@@ -1,10 +1,10 @@
 <h1>All Products</h1>
 
-<% @products.each do |product| %>
+<% @products.order(:name).each do |product| %>
     <div class="row">
-      <div class="col s12 m8 center-align">
+      <div class="col s12 m12 center-align">
         <div class="card">
-          <div class="card-image">
+          <div class="card-image product-pic">
             <img src="<%= product.img %>">
           </div>
 
